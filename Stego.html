@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hide</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/SimpleImage.js" ></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/stego.css">
+</head>
+<body>
+	<div id="main">
+		<div id="navbar">
+			<nav class="navbar navbar-inverse">
+			 	<div class="container">
+			    	<div class="navbar-header">
+			    		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      	</button>	
+			     		<a class="navbar-brand" href="Editors_Project.html"><i class="fa fa-camera-retro " aria-hidden="true"></i><b> Editors</b></a>
+			    	</div>
+			    	<div class="collapse navbar-collapse" id="collapse">
+					    <div class="nav navbar-nav">
+						        <li><a href="Editors_Project.html">Home</a></li>
+						    	<li><a href="Edit.html">Edit</a></li>
+						    	<li><a href="filter.html">Filter</a></li>
+						    	<li><a href="green.html">Composite</a></li>
+						    	<li class="active"><a href="stego.html">Hide</a></li>
+						    	<li><a href="RGB.html">Game</a></li>
+      					</div>
+      				</div>
+	 			</div>
+			</nav>
+		</div>
+		<div>
+			<h1>Hide One Image into Another</h1>
+			<div class="container-fluid row">
+				<div id="canvas" class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+				<div id="canvas" class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+					<canvas id="scan"></canvas>
+				</div>
+				<div id="canvas" class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+					<canvas id="hcan"></canvas>
+				</div>
+				<div id="canvas" class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+			</div>
+			<div class="container-fluid row">
+				<div id="canvas" class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+				<div id="canvas" class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+					<canvas id="ccan"></canvas>
+				</div>
+				<div id="canvas" class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+					<canvas id="ecan"></canvas>
+				</div>
+				<div id="canvas" class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+			</div>
+			<div class="container-fluid row" id="btn">
+				<div id="canvas" class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+				<p class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+				Image where to Hide: <input type="file" multiple="false" accept="image/*" id="input1" onchange="supload()" >
+				</p>
+				<p class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+				Image to Hide: <input type="file" multiple="false" accept="image/*" id="input2" onchange="hupload()" >
+				</p>
+				<p>
+				<div id="canvas" class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+				<input class="btn btn-success col-lg-2 col-md-2 col-sm-12 col-xs-12" type="button" value="Conceal" onclick="Merge()" >
+				<div id="canvas" class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+				<input class="btn btn-danger col-lg-2 col-md-2 col-sm-12 col-xs-12" type="button" value="Extract" onclick="Extract()" >
+				</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/stego.js"></script>
+</body>
+</html>
