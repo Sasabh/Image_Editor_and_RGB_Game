@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Photo</title>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/SimpleImage.js" ></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/edit.css">
+</head>
+<body>
+	<div id="main">
+		<div id="navbar">
+			<nav class="navbar navbar-inverse">
+			 	<div class="container">
+			    	<div class="navbar-header">
+			    		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      	</button>	
+			     		<a class="navbar-brand" href="Editors_Project.html"><i class="fa fa-camera-retro " aria-hidden="true"></i><b> Editors</b></a>
+			    	</div>
+			    	<div class="collapse navbar-collapse" id="collapse">
+					    <div class="nav navbar-nav">
+						        <li><a href="Editors_Project.html">Home</a></li>
+						    	<li class="active"><a href="Edit.html">Edit</a></li>
+						    	<li><a href="filter.html">Filter</a></li>
+						    	<li><a href="green.html">Composite</a></li>
+						    	<li><a href="stego.html">Hide</a></li>
+						    	<li><a href="RGB.html">Game</a></li>
+      					</div>
+      				</div>
+	 			</div>
+			</nav>
+		</div>
+		<h1>Upload your Image and Play Around</h1>
+		<div class="container-fluid row">
+			<div id="canvas" class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<canvas id="mycanvas"></canvas>
+			</div>
+			<div id="editarea" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+				<div>
+					<p>Brightness</p>
+					<input type="range" class="slider" min="0" max="200" value="100" name="Brightness" id="fbr" onchange="set()">
+					<p>Contrast</p>
+					<input type="range" class="slider" min="0" max="200" value="100" name="Contrast" id="fco" onchange="set()">
+					<p>Blur</p>
+					<input type="range" class="slider" min="0" max="10" value="0" name="Blur" id="fbl" onchange="set()">
+					<p>Grayscale</p>
+					<input type="range" class="slider" min="0" max="100" value="0" name="Grayscale" id="fgr" onchange="set()">
+					<p>Hue-Rotate</p>
+					<input type="range" class="slider" min="0" max="360" value="0" name="Hue-Rotate" id="fhu" onchange="set()">
+					<p>Invert</p>
+					<input type="range" class="slider" min="0" max="100" value="0" name="Invert" id="fin" onchange="set()">
+					<p>Opacity</p>
+					<input type="range" class="slider" min="0" max="100" value="100" name="Opacity" id="fop" onchange="set()">
+					<p>Saturate</p>
+					<input type="range" class="slider" min="0" max="500" value="100" name="Saturate" id="fsa" onchange="set()">
+					<p>Sepia</p>
+					<input type="range" class="slider" min="0" max="100" value="0" name="Sepia" id="fse" onchange="set()">
+				</div>
+			</div>
+		</div>
+		<br>
+		<div id="btnarea" class="container-fluid row">
+			<input class="col-lg-2 col-md-2 col-sm-2 col-xs-2" type="file" multiple="false" accept="image/*" id="uimg" onchange="uploadimage()">
+			<input class="btn btn-success col-lg-2 col-md-2 col-sm-2 col-xs-2" type="button" value="Reset Changes" onclick="reset()">
+			<input class="btn btn-danger col-lg-2 col-md-2 col-sm-2 col-xs-2" type="button" value="Clear Image" onclick="clearCanvas()">
+		</div>
+	</div>
+	<script type="text/javascript" src="js/edit.js"></script>
+</body>
+</html>
