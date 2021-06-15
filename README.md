@@ -1,2 +1,2 @@
-# Image-Editor-HTML
-A simple Image Editing website with a simple game
+# Image-Editor-RGB Game
+Normal Image Editing website with a simple RGB game
